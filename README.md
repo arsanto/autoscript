@@ -7,7 +7,7 @@
 </ul>
 <h3>More Info <b><a href="http://www.sshanaksolo.info/2017/05/autoscript-installer-vps-debian7-32bit.html">H E R E</a></b></h3>
 
-wget https://raw.github.com/sshanaksolo/autoscript/master/debian7.sh && bash debian7.sh
+wget --no-check-certificate https://raw.github.com/arsanto/autoscript/master/debian7.sh && chmod +x debian7.sh && ./debian7.sh
 
 
 
