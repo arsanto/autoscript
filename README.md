@@ -9,7 +9,7 @@
 
 wget --no-check-certificate https://raw.github.com/arsanto/autoscript/master/debian7.sh && chmod +x debian7.sh && ./debian7.sh
 
-wget --no-check-certificate https://raw.githubusercontent.com/arsanto/autoscript/master/setup-squid.sh
+wget --no-check-certificate https://raw.githubusercontent.com/arsanto/autoscript/master/setup-squid.sh && chmod +x setup-squid.sh && ./setup-squid.sh
 
 
 
