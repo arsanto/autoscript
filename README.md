@@ -9,7 +9,6 @@
 
 wget --no-check-certificate https://raw.github.com/arsanto/autoscript/master/debian7.sh && chmod +x debian7.sh && ./debian7.sh
 
-wget --no-check-certificate https://raw.githubusercontent.com/arsanto/autoscript/master/setup-squid.sh && chmod +x setup-squid.sh && ./setup-squid.sh
 
 
 
@@ -25,5 +24,11 @@ wget --no-check-certificate https://raw.githubusercontent.com/arsanto/autoscript
 # OPENVPN NAT
 
 wget --no-check-certificate https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+
+misal port ssh 14522 ganti pas install openvpn menjadi port 14501
+
+# SQUID INSTALL
+
+wget --no-check-certificate https://raw.githubusercontent.com/arsanto/autoscript/master/setup-squid.sh && chmod +x setup-squid.sh && ./setup-squid.sh
 
 misal port ssh 14522 ganti pas install openvpn menjadi port 14501
