@@ -20,3 +20,10 @@ wget --no-check-certificate https://raw.githubusercontent.com/arsanto/autoscript
 <li>What's script included</li>
 <li>How To Add OpenVPN</li>
 </ul>
+
+
+# OPENVPN NAT
+
+wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+
+misal port ssh 14522 ganti pas install openvpn menjadi port 14501
