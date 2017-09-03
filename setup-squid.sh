@@ -56,8 +56,15 @@ httpd_suppress_version_string    on
 forwarded_for delete
 END
 	
-	cat /tmp/squid.conf.tmp2 /tmp/squid.conf.tmp1	> /etc/squid3/squid.conf	
+	cat /tmp/squid.conf.tmp2 /tmp/squid.conf.tmp1	> /etc/squid3/squid.conf
+	cat /dev/null > /etc/security/limits.conf
+
+cat << EOF | tee -a /etc/security/limits.conf
+*       -       maxlogins       1
+EOF
+
 	service squid3 restart 
+	service ssh restart
 }
 
 
