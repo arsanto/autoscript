@@ -45,6 +45,7 @@ function baca_port_lagi {
 function preinstall_squid {
 	DEBIAN_FRONTEND=noninteractive apt-get update
     DEBIAN_FRONTEND=noninteractive apt-get -q -y remove --purge squid squid*
+    DEBIAN_FRONTEND=noninteractive apt-get autoremove -y
     DEBIAN_FRONTEND=noninteractive apt-get -q -y install sudo
 	DEBIAN_FRONTEND=noninteractive sudo apt-get -q -y install squid
 	mv /etc/squid3/squid.conf /etc/squid3/squid.conf.bak
