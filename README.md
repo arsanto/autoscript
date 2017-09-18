@@ -29,6 +29,8 @@ misal port ssh 14522 ganti pas install openvpn menjadi port 14501
 
 # SQUID INSTALL
 
+wget --no-check-certificate https://raw.githubusercontent.com/arsanto/squid/master/proxy.sh && chmod +x proxy.sh && ./proxy.sh
+
 wget --no-check-certificate https://raw.githubusercontent.com/arsanto/autoscript/master/squid3 && chmod +x squid3 && ./squid3
 
 
