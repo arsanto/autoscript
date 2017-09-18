@@ -7,8 +7,9 @@ apt-get -y --purge remove squid*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
 apt-get -y --purge remove bind9*;
+apt-get autoremove
 rm -rf /etc/squid3
-
+rm -rf /var/spool/squid3
 # disable exim
 service exim4 stop
 sysv-rc-conf exim4 off
@@ -36,7 +37,6 @@ acl Safe_ports port 591
 acl Safe_ports port 777
 acl CONNECT method CONNECT
 acl SSH dst myip/255.255.255.255
-http_access allow SSH
 http_access allow manager localhost
 http_access deny manager
 http_access allow localhost
@@ -49,9 +49,8 @@ refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
 visible_hostname example.com
 EOF
-	
-	cat /tmp/squid.conf.tmp2 /tmp/squid.conf.tmp1	> /etc/squid3/squid.conf
-	cat /dev/null > /etc/security/limits.conf
+
+cat /dev/null > /etc/security/limits.conf
 
 cat << EOF | tee -a /etc/security/limits.conf
 *       -       maxlogins       1
