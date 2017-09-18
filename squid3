@@ -1,5 +1,7 @@
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
+apt-get -y install fail2ban;service fail2ban restart
+
 
 
 # remove unused
